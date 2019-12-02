@@ -21,6 +21,7 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".TakePictureActivity" />
+        <activity android:name=".FileView"/>
         <activity
             android:name=".DetailedTabbedView"
             android:label="@string/title_activity_detailed_view"

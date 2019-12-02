@@ -3,15 +3,25 @@ package cs4330.cs.utep.ubeatcs;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import androidx.annotation.NonNull;
 import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.ListResult;
+import com.google.firebase.storage.StorageReference;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -75,8 +85,10 @@ public class PlaceholderFragment extends Fragment implements DetailedListAdapter
                 startActivity(youtubeIntent);
                 break;
             case 2:
-                toBrowser("http://www.cs.utep.edu/cheon/cs4330/index.php?page=notes");
-                break;
+                Intent fileView = new Intent(getContext(), FileView.class);
+                startActivity(fileView);
+//                toBrowser("http://www.cs.utep.edu/cheon/cs4330/index.php?page=notes");
+            break;
             case 3:
                 Intent i = new Intent(getContext(), TakePictureActivity.class);
                 startActivity(i);
