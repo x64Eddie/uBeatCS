@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -36,5 +36,11 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.11.3'
     implementation 'androidx.browser:browser:1.0.0'
     implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
+
+    implementation 'com.google.firebase:firebase-analytics:17.2.1'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-firestore:21.3.0'
+    implementation 'com.google.firebase:firebase-storage:19.1.0'
+
     compile files('YouTubeAndroidPlayerApi.jar')
 }
